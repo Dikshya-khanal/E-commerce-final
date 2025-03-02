@@ -1,0 +1,220 @@
+<html>
+<head>
+    
+    <title>E-Commerce</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0073e6;
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 30px;
+            margin-right: 10px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 15px;
+            background: #0073e6;
+            color: white;
+            border-radius: 5px;
+        }
+        .menu {
+            position: relative;
+            display: inline-block;
+        }
+        .menu-btn {
+            background: none;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #333;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #ffffff;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .menu .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            display: block;
+            text-decoration: none;
+            border-bottom: 1px solid #ccc;
+            background: #f8f8f8;
+        }
+        .menu .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+        .menu .dropdown-content a:hover {
+            background: #ddd;
+        }
+        .menu:focus-within .dropdown-content {
+            display: block;
+        }
+        .marquee {
+            width: 100%;
+            background: #0073e6;
+            color: white;
+            padding: 10px 0;
+            font-weight: bold;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            background: #eef5ff;
+        }
+        .hero-text {
+            max-width: 50%;
+            text-align: left;
+        }
+        .hero-text h1 {
+            font-size: 50px;
+            font-weight: bold;
+            color: #0073e6;
+        }
+        .hero-text p {
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .hero-image {
+            width: 50%; /* Increased size */
+        }
+        .hero-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .presented-by {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .overview-images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         gap: 10px; /* Reduce gap for a tighter layout */
+        }
+        .overview-images img {
+            width: 25%;
+            border-radius:10px;
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #0073e6;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="E-Commerce Icon">
+            E-Commerce
+        </div>
+        <div class="nav-links">
+            <a href="d.html">Home</a>
+            <a href="about1.html">About</a>
+            <a href="form1.html">Contact</a>
+        </div>
+        <div class="menu" tabindex="0">
+            <button class="menu-btn">☰ Menu</button>
+            <div class="dropdown-content">
+                <a href="introduction.html">Introduction and Objectives of E-Commerce</a>
+                <a href="history.html">The History and Evolution of E-commerce
+                </a>
+                <a href="types.html">Key E-commerce Business Models</a>
+                <a href="sheetal.html">Essential E-commerce Technologies and Platforms</a>
+                <a href="strategies.html">Strategies for Effective Online Marketing and Sales</a>
+                <a href="krishti.html">Supply chain Management and Logistics in E-commerce </a>
+                <a href="legals.html">Legal and Ethical Considerations in E-commerce </a>
+                <a href="future.html">Future of E-commerce: Trends and Predictions</a>
+                <a href="example.html"> Example: E-commerce website of a Coffee shop</a>
+                <a href="conclusion.html">Conclusion</a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="marquee">
+        <marquee>"E-Commerce: Revolutionizing the Future of Business!"</marquee>
+    </div>
+    
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Welcome to the Future of Online Shopping</h1>
+            <p>Discover how E-Commerce is reshaping businesses globally, revolutionizing the way we buy, sell, and connect with customers through innovative technology and digital platforms.</p>
+            <a href="introduction.html"class="btn">Get Started</a>
+        </div>
+        <div class="hero-image">
+            <img src="main.jpg" alt="E-Commerce Illustration">
+        </div>
+    </section>
+    
+    <div class="presented-by">Presented by Class 11 'A' Girls Team</div>
+    
+    <section class="overview">
+        <h2>E-commerce: A Comprehensive Overview</h2>
+       
+        <p>This site provides meaningful knowledge on different aspects of E-commerce, shaping modern trade and business.</p>
+        <div class="overview-images">
+            <img src="download.jpeg" alt="E-Commerce Concept">
+            <img src="middle.png" alt="Digital Transactions">
+            <img src="download (1).jpeg" alt="Online Shopping">
+        </div>
+        <div class="social-icons">
+            <a href="#"><img src="facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="insta.jpeg" alt="Instagram"></a>
+            <a href="#"><img src="whatsapp.jpeg" alt="WhatsApp"></a>
+        </div><p>Consult us via facebook messenger and whatsapp for any doubts.</p>
+    </section>
+</body>
+</html>

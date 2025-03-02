@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #E6F0FF; /* Light blue background */
+}
+
+.container {
+    width: 90%;
+    height: 500px; /* Added 'px' for correct height */
+    margin: auto;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    background: #ffffff; /* White background for content */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.responsive {
+    width: 150px; /* Set a fixed width for the image */
+    height: auto;
+    margin-right: 20px; /* Space between image and text */
+}
+
+.text {
+    max-width: 600px; /* Limit the width of the text */
+    color: #151414; /* Dark text for readability */
+}

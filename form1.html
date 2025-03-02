@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff; /* Light blue background */
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 36px;
+        color: #0000ff; /* Blue color */
+      }
+
+      form {
+        display: inline-block;
+        text-align: left;
+        padding: 20px;
+        border: 2px solid #0000ff; /* Blue border */
+        border-radius: 10px;
+        background-color: #e6f7ff; /* Light blue background for form */
+      }
+
+      input[type="text"], textarea {
+        padding: 10px;
+        margin: 10px 0;
+        width: 200px;
+        font-size: 16px;
+        border-radius: 5px;
+      }
+
+      input[type="submit"], input[type="button"] {
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #0000ff; /* Blue background for buttons */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      input[type="radio"] {
+        margin: 10px;
+      }
+
+      p {
+        font-size: 18px;
+        color: #0000ff;
+      }
+
+      textarea {
+        resize: none;
+        height: 100px;
+        width: 250px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h2>form</h2>
+
+    <form action="./contact.html">
+      <label for="username">First Name:</label><br>
+      <input type="text" name="first name" required><br>
+      <label for="lname">Last Name:</label><br>
+      <input type="text" id="lname" name="lname"><br><br>
+      <label for="email">Email:</label><br>
+      <input type="email" name="email" required><br><br>
+      <label for="marital">Marital Status:</label><br>
+      <input type="radio" name="c1" value="married"> Married
+      <input type="radio" name="c2"> Unmarried
+      <br><br>
+
+      <label for="feedback">Feedback:</label><br>
+      <textarea name="feedback" placeholder="Enter your feedback here..."></textarea><br><br>
+
+      <input type="submit" value="Submit">
+      <br><br>
+    </form>
+
+    <p>If you click the "Submit" button, the form data will be sent and you can get access to the contact details for further info about any doubts related to the topic.</p>
+
+  </body>
+</html>
+

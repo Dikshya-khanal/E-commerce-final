@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop E-Commerce</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        .header {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #f8f8f8;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .image-container img {
+            width: 80%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: white;
+        }
+       /* Navigation Buttons */
+.nav-buttons {
+    position: fixed;
+    top: 50%;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.nav-buttons a {
+    background-color: #0073e6;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.nav-buttons a:hover {
+    background-color: #005bb5;
+}
+
+/* Ensure buttons do not get cut off on smaller screens */
+@media (max-width: 600px) {
+    .nav-buttons {
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    .nav-buttons a {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Example: Coffee Shop E-Commerce Website</h1>
+    </header>
+
+    <section class="image-container">
+        <img src="coffee.png" alt="Coffee Shop Website">
+        <p style="font-size: 0.9rem; color: #555;"><b>Image taken from Google, source: Dribbble.</b></p>
+
+        <img src="coffee2.png" alt="Coffee Shop Website Templates">
+        <p style="font-size: 0.9rem; color: #555;">Other templates taken from Google, source: Dribbble.</p>
+    </section>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+        <a href="future.html">Back</a>
+        <a href="conclusion.html">Next</a>
+      </div>
+
+</body>
+</html>
