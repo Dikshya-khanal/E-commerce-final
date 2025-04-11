@@ -1,44 +1,131 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Shop E-Commerce</title>
+    <title>Mitho Coffee Shop</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            position: relative;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f5f0;
         }
-        .header {
+        header {
+            background-color: #3e2723;
+            color: white;
+            padding: 1em 2em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.7em;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1em;
+            font-weight: 500;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+            padding: 4em 2em;
             text-align: center;
-            padding: 50px 0;
-            background-color: #f8f8f8;
-        }
-        .header h1 {
-            font-size: 2.5rem;
-            color: #333;
-        }
-        .image-container {
-            text-align: center;
-            margin-top: 30px;
-        }
-        .image-container img {
-            width: 80%;
-            max-width: 800px;
-            height: auto;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-        .footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #333;
             color: white;
         }
-       /* Navigation Buttons */
-.nav-buttons {
+        .hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+        .hero p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .container {
+            padding: 2em;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2em;
+        }
+        .card {
+            background-color: #fff0e6;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            padding: 1.5em;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.03);
+        }
+        .card img {
+            width: 100%;
+            border-radius: 12px;
+        }
+        .title {
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-top: 0.5em;
+        }
+        .description {
+            font-size: 0.9em;
+            margin: 0.5em 0;
+        }
+        .price {
+            color: #a8ff60;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .discount {
+            color: #ffc1c1;
+            text-decoration: line-through;
+            font-size: 0.9em;
+            margin-left: 10px;
+        }
+        .rating {
+            margin-top: 0.5em;
+            color: #ffd700;
+            font-size: 1em;
+        }
+        .buy-btn {
+            margin-top: 1em;
+            padding: 0.7em 1.5em;
+            background-color: #ff7043;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .buy-btn:hover {
+            background-color: #ff5722;
+        }
+        footer {
+            background-color: #3e2723;
+            color: white;
+            text-align: center;
+            padding: 1.5em;
+            margin-top: 2em;
+        }
+        .section-box {
+            background-color: #f0e0d6;
+            padding: 2em;
+            margin: 2em;
+            border-radius: 10px;
+            display: none;
+        }
+        #home, #about, #contact {
+            display: none;
+        }
+        .active-section {
+            display: block;
+        }
+        .nav-buttons {
     position: fixed;
     top: 50%;
     width: 95%;
@@ -77,28 +164,182 @@
         padding: 10px 20px;
     }
 }
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff7f0;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    padding: 1em;
+    z-index: 1;
+    border-radius: 10px;
+    color: #3e2723;
+    top: 40px;
+    left: 0;
+}
+
+/* Show the dropdown on hover or click using a class */
+.dropdown:hover .dropdown-content,
+.dropdown.active .dropdown-content {
+    display: block;
+}
+
+/* Style the dropdown content */
+.dropdown-content h3 {
+    margin-top: 0;
+    color: #3e2723;
+    font-size: 1.2em;
+}
+
+.dropdown-content p {
+    font-size: 0.9em;
+    margin-top: 0.5em;
+}/* Form Styling inside Dropdown */
+.dropdown-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dropdown-content input, .dropdown-content select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.9em;
+}
+
+.dropdown-content button {
+    padding: 10px;
+    background-color: #ff7043;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content button:hover {
+    background-color: #e64a19;
+}
+
+
 
     </style>
 </head>
 <body>
-
-    <header class="header">
-        <h1>Example: Coffee Shop E-Commerce Website</h1>
+    <header>
+        <h1>☕ Mitho Coffee Shop</h1>
+        <nav>
+            <nav>
+                <div class="dropdown" onclick="toggleDropdown(this)">
+                    <a href="#">Home</a>
+                    <div class="dropdown-content">
+                        <h3>Welcome to Mitho Coffee</h3>
+                        <p>Discover a range of handpicked brews crafted with love. We offer a cozy vibe, a strong espresso, and smiles all day!</p>
+                    </div>
+                </div>
+                <div class="dropdown" onclick="toggleDropdown(this)">
+                    <a href="#">About</a>
+                    <div class="dropdown-content">
+                        <h3>About Us</h3>
+                        <p>Mitho Coffee Shop started in the Rajpur of kapilvastu district by Dikshya Khanal with a simple vision: to share warmth and happiness through each cup of coffee.</p>
+                    </div>
+                </div>
+                <div class="dropdown" onclick="toggleDropdown(this)">
+                    <a href="#">Contact</a>
+                    <div class="dropdown-content">
+                        <h3>Contact Us</h3>
+                        <p>Email: support@mithocoffee.com<br>Phone: +1234567890 <br>Location: Rajpur,kapilvastu, Nepal</p>
+                    </div>
+                </div>
+         </div>
+         <a href="form1.html">sign up</a>
+                
+            </nav>
+            
+        </nav>
     </header>
 
-    <section class="image-container">
-        <img src="coffee.png" alt="Coffee Shop Website">
-        <p style="font-size: 0.9rem; color: #555;"><b>Image taken from Google, source: Dribbble.</b></p>
+    <div class="hero">
+        <h2>Make Your Day Fresh with Fresh Coffee</h2>
+        <p>From early mornings to late nights, we've got a perfect cup waiting for you. Explore our top blends and order your favorite!</p>
+    </div>
 
-        <img src="coffee2.png" alt="Coffee Shop Website Templates">
-        <p style="font-size: 0.9rem; color: #555;">Other templates taken from Google, source: Dribbble.</p>
-    </section>
+    <div class="container">
+        <div class="card">
+            <img src="midnight.jpg" alt="Midnight Frappuccino">
+            <div class="title">Midnight Frappuccino</div>
+            <div class="description">Refresh your night with a dark twist. Perfect for midnight cravings.</div>
+            <div class="price">RS.220 <span class="discount">RS.250</span></div>
+            <div class="rating">★★★★☆</div>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="card">
+            <img src="caramel.jpg" alt="Caramel Ribbon">
+            <div class="title">Caramel Ribbon</div>
+            <div class="description">Make your day golden with sweet caramel bliss. Order now!</div>
+            <div class="price">RS.300<span class="discount">RS.350</span></div>
+            <div class="rating">★★★★★</div>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="card">
+            <img src="strawberry jpg.jpg" alt="Strawberry Funnel">
+            <div class="title">Strawberry Funnel</div>
+            <div class="description">Bursting with fruity delight. A fresh twist to your usual cup.</div>
+            <div class="price">RS.180 <span class="discount">RS.200</span></div>
+            <div class="rating">★★★☆☆</div>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="card">
+            <img src="caramel frapuciono.jpg" alt="Caramel Frappuccino">
+            <div class="title">Caramel Frappuccino</div>
+            <div class="description">Sip the classic sweetness of caramel and cool your senses.</div>
+            <div class="price">RS.210<span class="discount">RS.250</span></div>
+            <div class="rating">★★★★☆</div>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+    </div>
 
+    <div id="home" class="section-box active-section">
+        <h2>Welcome to Mitho Coffee Shop</h2>
+        <p>We deliver freshly brewed, handcrafted coffee with love. Enjoy a range of flavors and experiences from the comfort of your home. Discover blends that awaken your senses!</p>
+    </div>
+
+    <div id="about" class="section-box">
+        <h2>About Us</h2>
+        <p>Mitho Coffee Shop is a blend of tradition and innovation. We are passionate about providing the highest quality coffee with a personal touch. Our story began with a dream to share warmth in every cup.</p>
+    </div>
+    
     <!-- Navigation Buttons -->
     <div class="nav-buttons">
         <a href="future.html">Back</a>
         <a href="conclusion.html">Next</a>
       </div>
+      <section class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial">"Best coffee shop in Rajpur! The Caramel Ribbon is a game changer ☕❤️" – Aaditya B.</div>
+        <div class="testimonial">"Perfect ambiance and perfect espresso. I go there every morning!" – Ritu S.</div>
+    </section>
 
+    <section class="newsletter">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to our newsletter for exclusive offers and updates!</p>
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
+    </section>
+
+
+
+    <footer>
+        <p>&copy; 2025 Mitho Coffee Shop. Freshness in every sip </p>
+    </footer>
 </body>
 </html>
